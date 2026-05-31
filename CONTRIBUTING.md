@@ -17,14 +17,18 @@ Please follow the house rules to have a bigger chance of your contribution being
  - Please use 2-space indentation when editing the JavaScript. A `.jshintrc` file is present, which will help your code to follow the guidelines if you install and run `jshint`.
  - Please test your modification thoroughly before submitting your Pull Request.
 
-### Changes that might not be accepted
+### Some changes might not be accepted
 We have to be conservative with the core game. This means that some modifications won't be merged, or will have to be evaluated carefully before being merged:
+
+### A sort of wishlist
+These features would be nice to have in the game.
 
  - Undo/redo features
  - Save/reload features
- - Changes to how the tiles look or their contents
- - Changes to the layout
  - Changes to the grid size
+ - Start-up menu to change the settings before the game starts (e.g. grid size, emergency purge allowance, etc.)
+ - Overall points (the amount of points ever collected)
+ - Some special features could only be available if the player has collected enough score. Each feature requires a certain amount of points to be 'paid'.
 
 ### Changes that are welcome
  - Bug fixes
