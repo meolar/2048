@@ -143,9 +143,9 @@ HTMLActuator.prototype.showPurgeMessage = function (text) {
   var self = this;
   this.purgeMessageContainer.textContent = text;
   this.purgeMessageContainer.style.display = "block";
-  // Hide after 2 seconds
+  // Hide after 4 seconds
   setTimeout(function () {
     self.purgeMessageContainer.textContent = "";
     self.purgeMessageContainer.style.display = "none";
-  }, 2000);
+  }, 4000);
 };
