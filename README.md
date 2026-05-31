@@ -3,7 +3,7 @@ A clone of [2048 by Gabriele Cirulli](https://github.com/gabrielecirulli/2048)
 
 A lot of the code is the same as the original, but a few features have been added. I would appreciate any contributors reporting bugs or opening pull requests.
 
-You can play the game [here](https://meolar.github.io/2048).
+You can play the game [here](https://meolar.github.io/2048/index.html).
 
 ### Screenshot
 
