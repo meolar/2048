@@ -63,7 +63,7 @@ h1.title {
   text-align: right;
 }
 
-.score-container, .best-container {
+.score-container, .best-container, .movecount-container {
   position: relative;
   display: inline-block;
   background: #bbada0;
@@ -77,7 +77,7 @@ h1.title {
   margin-top: 8px;
   text-align: center;
 }
-.score-container:after, .best-container:after {
+.score-container:after, .best-container:after, .movecount-container:after {
   position: absolute;
   width: 100%;
   top: 10px;
@@ -88,7 +88,7 @@ h1.title {
   text-align: center;
   color: #eee4da;
 }
-.score-container .score-addition, .best-container .score-addition {
+.score-container .score-addition, .best-container .score-addition, .movecount-container .score-addition {
   position: absolute;
   right: 30px;
   color: red;
@@ -108,9 +108,11 @@ h1.title {
 .score-container:after {
   content: "Score";
 }
-
 .best-container:after {
   content: "Best";
+}
+.movecount-container:after {
+	content: "Moves";
 }
 
 p {
@@ -384,35 +386,30 @@ hr {
   font-weight: bold;
   z-index: 10;
   font-size: 55px;
-  color: #06090d;
+  color: #f9f6f2;
 }
 .tile.tile-2 .tile-inner {
   background: #4285f4;
-  color: #f9f6f2;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 .tile.tile-4 .tile-inner {
   background: #ea4335;
-  color: #f9f6f2;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 .tile.tile-8 .tile-inner {
   background: #fbbc05;
-  color: #f9f6f2;
 }
 .tile.tile-16 .tile-inner {
   background: #34a853;
-  color: #f9f6f2;
 }
 .tile.tile-32 .tile-inner {
   background: #e84e9b;
-  color: #f9f6f2;
 }
 .tile.tile-64 .tile-inner {
   background: #27a28b;
-  color: #f9f6f2;
 }
 .tile.tile-128 .tile-inner {
   background: #f67c5f;
-  color: #f9f6f2;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
   font-size: 45px;
 }
@@ -423,7 +420,6 @@ hr {
 }
 .tile.tile-256 .tile-inner {
   background: #2b5bad;
-  color: #f9f6f2;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
   font-size: 45px;
 }
@@ -434,8 +430,7 @@ hr {
 }
 .tile.tile-512 .tile-inner {
   background: #b79473;
-  color: #f9f6f2;
-  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+  box-shadow: 0 0 20px 20px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
   font-size: 45px;
 }
 @media screen and (max-width: 520px) {
@@ -445,7 +440,6 @@ hr {
 }
 .tile.tile-1024 .tile-inner {
   background: #edc850;
-  color: #f9f6f2;
   box-shadow: 0 0 20px 20px #edc850a6, inset 0 0 0 1px #edc850a6;
   font-size: 35px;
 }
@@ -456,8 +450,7 @@ hr {
 }
 .tile.tile-2048 .tile-inner {
   background: #edc22e;
-  color: #f9f6f2;
-  box-shadow: 0 0 20px 20px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
   font-size: 35px;
 }
 @media screen and (max-width: 520px) {
@@ -467,7 +460,6 @@ hr {
 }
 .tile.tile-super .tile-inner {
   background: #3c3a32;
-  color: #f9f6f2;
   font-size: 30px;
 }
 @media screen and (max-width: 520px) {
