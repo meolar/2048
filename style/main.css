@@ -427,8 +427,8 @@ hr {
   }
 }
 .tile.tile-512 .tile-inner {
-  background: #edc850;
-  box-shadow: 0 0 20px 20px #edc850a6, inset 0 0 0 1px #edc850a6;
+  background: #b79473;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
   font-size: 45px;
 }
 @media screen and (max-width: 520px) {
@@ -437,8 +437,8 @@ hr {
   }
 }
 .tile.tile-1024 .tile-inner {
-  background: #b79473;
-  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+  background: #edc850;
+  box-shadow: 0 0 20px 20px #edc850a6, inset 0 0 0 1px #edc850a6;
   font-size: 35px;
 }
 @media screen and (max-width: 520px) {
