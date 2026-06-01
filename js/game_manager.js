@@ -77,7 +77,6 @@ GameManager.prototype.setup = function () {
   } else {
     this.grid        = new Grid(this.size);
     this.score       = 0;
-    this.moveCount   = 0;
     this.over        = false;
     this.won         = false;
     this.keepPlaying = false;
@@ -108,31 +107,18 @@ GameManager.prototype.addRandomTile = function () {
   }
 };
 
-// Increments the move count
-GameManager.prototype.incrementMoveCount = function () {
-  if (this.moveCount === 0) {
-    this.moveCount = 1;
-  } else {
-    this.moveCount += 1;
-  };
-  var moveCountElement = document.querySelector(".movecount-container");
-  moveCountElement.innerHTML = this.moveCount;
-};
-
 // Sends the updated grid to the actuator
 GameManager.prototype.actuate = function () {
   if (this.storageManager.getBestScore() < this.score) {
     this.storageManager.setBestScore(this.score);
   }
-  
+
   // Clear the state when the game is over (game over only, not win)
   if (this.over) {
     this.storageManager.clearGameState();
-    this.storageManager.clearMoveCount();
   } else {
     this.storageManager.setGameState(this.serialize());
-    this.storageManager.setMoveCount(this.moveCount);
-  };
+  }
 
   this.actuator.actuate(this.grid, {
     score:      this.score,
@@ -241,7 +227,6 @@ GameManager.prototype.move = function (direction) {
   if (moved) {
     if (!this.afterPurge) {
       this.addRandomTile();
-      this.incrementMoveCount();
     }
     this.afterPurge = false;
 
