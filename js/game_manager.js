@@ -10,9 +10,28 @@ function GameManager(size, InputManager, Actuator, StorageManager) {
   this.inputManager.on("restart", this.restart.bind(this));
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
   this.inputManager.on("purge", this.purge.bind(this));
+  this.inputManager.on("changeColorScheme", this.changeColorScheme.bind(this));
+  this.isDarkMode = false;
 
   this.setup();
 }
+
+// Change from dark mode to light mode, and vice versa
+GameManager.prototype.changeColorScheme = function () {
+  var colorbody = this.document.querySelector("body");
+  var colorhtml = this.document.querySelector("html");
+  if (colorbody.classList.contains("dark") && colorhtml.classList.contains("dark")) {
+    colorbody.classList.remove("dark");
+    colorhtml.classList.remove("dark");
+    this.isDarkMode = false;
+  } else {
+    colorbody.classList.add("dark");
+    colorhtml.classList.add("dark");
+    this.isDarkMode = true;
+  }
+}
+
+
 
 // Restart the game
 GameManager.prototype.restart = function () {
