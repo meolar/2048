@@ -19,8 +19,9 @@ window.fakeStorage = {
 };
 
 function LocalStorageManager() {
-  this.bestScoreKey     = "bestScore";
-  this.gameStateKey     = "gameState";
+  this.bestScoreKey = "bestScore";
+  this.gameStateKey = "gameState";
+  this.moveCountKey = "moveCount";
 
   var supported = this.localStorageSupported();
   this.storage = supported ? window.localStorage : window.fakeStorage;
@@ -60,4 +61,18 @@ LocalStorageManager.prototype.setGameState = function (gameState) {
 
 LocalStorageManager.prototype.clearGameState = function () {
   this.storage.removeItem(this.gameStateKey);
+};
+
+// Move count getters/setters and clearing
+LocalStorageManager.prototype.getMoveCount = function () {
+  var stateJSON = this.storage.getItem(this.moveCountKey);
+  return stateJSON ? JSON.parse(stateJSON) : null;
+};
+
+LocalStorageManager.prototype.setMoveCount = function (gameState) {
+  this.storage.setItem(this.moveCountKey, JSON.stringify(gameState));
+};
+
+LocalStorageManager.prototype.clearMoveCount = function () {
+  this.storage.removeItem(this.moveCountKey);
 };
