@@ -73,6 +73,7 @@ KeyboardInputManager.prototype.listen = function () {
   this.bindButtonPress(".restart-button", this.restart);
   this.bindButtonPress(".purge-button", this.purge);
   this.bindButtonPress(".keep-playing-button", this.keepPlaying);
+  this.bindButtonPress(".colorscheme-button", this.changeColorScheme);
 
   // Respond to swipe events
   var touchStartClientX, touchStartClientY;
@@ -131,6 +132,10 @@ KeyboardInputManager.prototype.purge = function (event) {
   event.preventDefault();
   this.emit("purge");
 };
+
+KeyboardInputManager.prototype.changeColorScheme = function (event) {
+  event.preventDefault();
+  this.emit("changeColorScheme");
 
 KeyboardInputManager.prototype.restart = function (event) {
   event.preventDefault();
