@@ -15,7 +15,7 @@ Please follow the house rules to have a bigger chance of your contribution being
  SASS will automatically recompile your css when changed.
  - `Rakefile` contains some tasks that help during development. Feel free to add useful tasks if needed.
  - Please use 2-space indentation when editing the JavaScript. A `.jshintrc` file is present, which will help your code to follow the guidelines if you install and run `jshint`.
- - Please test your modification thoroughly before submitting your Pull Request.
+ - If you have not tested your modification thoroughly, Please make a Draft Pull Request. Drafts cannot be merged and it helps designate what is work-in-progress and what is not.
 
 ### Some changes might not be accepted
 We have to be conservative with the core game. This means that some modifications won't be merged, or will have to be evaluated carefully before being merged:
