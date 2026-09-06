@@ -5,12 +5,10 @@ A lot of the code is the same as the original, but a few features have been adde
 
 You can play the game [here](https://meolar.github.io/2048/index.html).
 
-### Screenshots
+## Screenshots
 
-<p align="center">
-  <img src="Screenshot_01.png" alt="Screenshot of the game."/>
-  <img src="Screenshot_02.png" alt="Screenshot of the game."/>
-</p>
+| <img src="Screenshot_01.png" alt="Screenshot of the game." width="500px">Mid-game. | <img src="Screenshot_02.png" alt="Screenshot of the game." width="500px">The game over screen. |
+|-|-|
 
 ## Contributing
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
