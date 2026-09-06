@@ -5,10 +5,11 @@ A lot of the code is the same as the original, but a few features have been adde
 
 You can play the game [here](https://meolar.github.io/2048/index.html).
 
-### Screenshot
+### Screenshots
 
 <p align="center">
-  <img src="2048_preview.png" alt="Screenshot of the game."/>
+  <img src="Screenshot_01.png" alt="Screenshot of the game."/>
+  <img src="Screenshot_02.png" alt="Screenshot of the game."/>
 </p>
 
 ## Contributing
